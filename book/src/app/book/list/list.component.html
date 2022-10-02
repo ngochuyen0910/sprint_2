@@ -1,0 +1,28 @@
+<br>
+<h2 class="d-flex justify-content-center">Văn học nước ngoài</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3" *ngFor="let item of book">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="card mt-5" style="width: 18rem;">
+          <a [routerLink]="['/detail/', item.id]">
+          <img [src]="item.image" height="300px" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <strong class="card-text">{{item.nameBook}}<br></strong>
+              <p>Số trang: {{item.pageNumber}}<br>
+              Giá: {{item.price | currency}}</p>
+            <a class="text-white" [routerLink]="['/cart']"
+               style="margin-right: 20px">
+              <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="padding-left: 645px">
+</div>
+
+
+

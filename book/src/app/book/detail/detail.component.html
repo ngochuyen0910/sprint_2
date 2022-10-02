@@ -1,0 +1,25 @@
+<br>
+<div class="container">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="bookDetail.image" height="300px" style="padding: 5px;" alt="" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8" >
+        <div class="card-body">
+          <h3 class="card-title">{{bookDetail.nameBook}}</h3>
+          <p class="card-text">Tác giả: {{bookDetail.writer}}</p>
+          <p class="card-text">Người dịch: {{bookDetail.translate}}</p>
+          <p class="card-text">Nhà sản xuất: {{bookDetail.company}}</p>
+          <p class="card-text">Số trang: {{bookDetail.pageNumber}}</p>
+          <p class="card-text">Kích thước: {{bookDetail.size}}</p>
+          <p class="card-text">Ngày sản xuất: {{bookDetail.dayOut}}</p>
+          <p class="card-text">Giá: {{bookDetail.price}}</p>
+
+          <h5 class="card-text">Giới thiệu sách</h5>
+        </div>
+        <p class="card-text">{{bookDetail.content}}</p>
+      </div>
+    </div>
+  </div>
+</div>
