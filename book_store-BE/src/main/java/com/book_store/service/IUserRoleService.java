@@ -1,7 +1,6 @@
-package vn.codegym.pig_farm.service;
+package com.book_store.service;
 
-
-import vn.codegym.pig_farm.entity.UserRole;
+import com.book_store.model.UserRole;
 
 import java.util.List;
 

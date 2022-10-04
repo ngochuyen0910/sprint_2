@@ -1,4 +1,4 @@
-package vn.codegym.pig_farm.config;
+package com.book_store.config;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

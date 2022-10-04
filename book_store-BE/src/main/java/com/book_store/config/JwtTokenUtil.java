@@ -1,4 +1,4 @@
-package vn.codegym.pig_farm.config;
+package com.book_store.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

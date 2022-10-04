@@ -1,6 +1,6 @@
-package vn.codegym.pig_farm.service;
+package com.book_store.service;
 
-import vn.codegym.pig_farm.entity.AppUser;
+import com.book_store.model.AppUser;
 
 import javax.mail.MessagingException;
 import java.io.UnsupportedEncodingException;

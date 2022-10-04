@@ -1,5 +1,9 @@
-package vn.codegym.pig_farm.service.impl;
+package com.book_store.service.impl;
 
+import com.book_store.model.AppUser;
+import com.book_store.model.UserRole;
+import com.book_store.repository.UserRepository;
+import com.book_store.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,10 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import vn.codegym.pig_farm.entity.AppUser;
-import vn.codegym.pig_farm.entity.UserRole;
-import vn.codegym.pig_farm.repository.UserRepository;
-import vn.codegym.pig_farm.repository.UserRoleRepository;
 
 import java.util.ArrayList;
 import java.util.List;

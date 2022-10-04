@@ -1,13 +1,12 @@
-package vn.codegym.pig_farm.service.impl;
+package com.book_store.service.impl;
 
+import com.book_store.model.AppUser;
+import com.book_store.repository.UserRepository;
+import com.book_store.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-import vn.codegym.pig_farm.entity.AppUser;
-import vn.codegym.pig_farm.repository.UserRepository;
-import vn.codegym.pig_farm.service.IUserService;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.UnsupportedEncodingException;

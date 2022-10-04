@@ -1,4 +1,4 @@
-package vn.codegym.pig_farm.entity;
+package com.book_store.model;
 
 import java.io.Serializable;
 

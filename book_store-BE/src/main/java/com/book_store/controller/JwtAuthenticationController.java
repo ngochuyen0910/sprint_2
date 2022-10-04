@@ -1,5 +1,11 @@
-package vn.codegym.pig_farm.controller;
+package com.book_store.controller;
 
+import com.book_store.config.JwtTokenUtil;
+import com.book_store.model.JwtRequest;
+import com.book_store.model.JwtResponse;
+import com.book_store.model.MessageResponse;
+import com.book_store.service.IUserService;
+import com.book_store.service.impl.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +18,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import vn.codegym.pig_farm.config.JwtTokenUtil;
-import vn.codegym.pig_farm.entity.JwtRequest;
-import vn.codegym.pig_farm.entity.JwtResponse;
-import vn.codegym.pig_farm.entity.MessageResponse;
-import vn.codegym.pig_farm.service.IUserService;
-import vn.codegym.pig_farm.service.impl.JwtUserDetailsService;
 
 import javax.mail.MessagingException;
 import java.io.UnsupportedEncodingException;
@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api/public")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin
 public class JwtAuthenticationController {
 
     @Autowired

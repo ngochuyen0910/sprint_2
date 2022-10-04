@@ -1,4 +1,4 @@
-package vn.codegym.pig_farm.common;
+package com.book_store.common;
 
 public class MyConstants {
     public static final String MY_EMAIL = "sangnguyenjp97@gmail.com";

@@ -1,10 +1,10 @@
-package vn.codegym.pig_farm.config;
+package com.book_store.config;
 
+import com.book_store.common.MyConstants;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import vn.codegym.pig_farm.common.MyConstants;
 
 import java.util.Properties;
 
