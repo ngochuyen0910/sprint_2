@@ -13,7 +13,7 @@
               Giá: {{item.price | number}} VNĐ</p>
             <a class="text-white" [routerLink]="['/cart']"
                style="margin-right: 20px">
-              <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+              <button type="button" class="btn btn-primary" (click)="addCart(item)">Thêm vào giỏ</button>
             </a>
           </div>
         </div>

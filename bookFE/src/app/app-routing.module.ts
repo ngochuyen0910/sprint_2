@@ -11,18 +11,10 @@ import {VerityResetPasswordComponent} from './security/verity-reset-password/ver
 const routes: Routes = [{
   path: '',
   component: ListComponent,
-  canActivate: [AuthGuard],
-  data: {
-    roles: ['ROLE_ADMIN', 'ROLE_USER']
-  }
 },
   {
     path: 'detail/:id',
     component: DetailComponent,
-    canActivate: [AuthGuard],
-    data: {
-      roles: ['ROLE_ADMIN', 'ROLE_USER']
-    }
   },
   {
     path: 'cart',

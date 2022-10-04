@@ -1,8 +1,6 @@
+import {Book} from './book';
+
 export interface BookCart {
-  id?: number;
-  name?: string;
-  price?: number;
+  book?: Book;
   amount?: number;
-  total?: number;
-  image?: string;
 }

@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './security/login/login.component';
 import {ResetPasswordComponent} from './security/reset-password/reset-password.component';
 import {VerityResetPasswordComponent} from './security/verity-reset-password/verity-reset-password.component';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {VerityResetPasswordComponent} from './security/verity-reset-password/ver
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    ToastrModule.forRoot(),
     FormsModule,
   ],
   providers: [],

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {BookCart} from '../model/cart';
 import {BooksService} from '../service/books.service';
 import {CartService} from '../service/cart.service';
+import {Book} from '../model/book';
 
 
 @Component({
@@ -20,9 +21,15 @@ export class CartComponent implements OnInit {
   }
 
   getAll() {
-    this.bookCartService.findAll().subscribe(bookCart => {
-      console.log(bookCart);
-      this.bookCart = bookCart;
-    });
+    this.bookCart = JSON.parse(localStorage.getItem('cart'));
+  }
+
+  decCard(item: Book) {
+    this.bookCartService.addCard(item, -1);
+    this.getAll();
+  }
+  incCard(item: Book) {
+    this.bookCartService.addCard(item, 1);
+    this.getAll();
   }
 }
