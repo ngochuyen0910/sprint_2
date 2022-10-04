@@ -1,0 +1,63 @@
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body" style="background: #2B2C2D; border-radius: inherit;">
+            <div class="d-flex justify-content-end">
+              <span style="background: #9F391A; width: 30px; border-radius: 15px;">
+                 <button type="button" class="btn-close btn-close-white btn-sm" routerLink=""
+                         style="width: 0.5rem; height: 0.5rem; opacity: 66%"></button>
+              </span>
+            </div>
+            <h5 class="card-title text-isLoggedIncenter d-flex justify-content-center">
+              <img src="https://png.pngtree.com/template/20190809/ourmid/pngtree-reading-book-logo-designs-image_291340.jpg" width="33%" height="100px" alt="">
+            </h5>
+            <form class="form-signin" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+              <div class="form-label-group input-group mb-3">
+                <div class="input-group-text" style="background-color: #1E1E1E; border: none">
+                  <div class="mt-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                         class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                            style="color: #3B3B3B"/>
+                    </svg>
+                  </div>
+                </div>
+                <input autofocus formControlName="username" type="text" id="inputEmail" class="form-control text-light"
+                       style="background-color: #1E1E1E; border: none"
+                       placeholder="TÊN TÀI KHOẢN">
+              </div>
+              <div class="form-label-group input-group mb-3">
+                <div class="input-group-text" style="background-color: #1E1E1E; border: none">
+                  <div class="mt-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                         class="bi bi-key-fill" viewBox="0 0 16 16" style="transform: rotate(135deg);">
+                      <path
+                        d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                        style="color: #3B3B3B"/>
+                    </svg>
+                  </div>
+                </div>
+                <input type="password" id="inputPassword" class="form-control text-light" formControlName="password"
+                       placeholder="MẬT KHẨU"
+                       style="background-color: #1E1E1E; border: none"
+                       required>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input me-2" id="customCheck1" formControlName="remember_me">
+                <label class="custom-control-label text-light" for="customCheck1">Ghi nhớ đăng nhập lần sau</label>
+              </div>
+              <div>
+                <p><a routerLink="/reset-password" data-dismiss="modal" class="text-light">Quên mật khẩu?</a></p>
+              </div>
+              <button class="btn btn-lg btn-secondary text-uppercase" type="submit"
+                      style="background: #F160D4;">ĐĂNG NHẬP
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
