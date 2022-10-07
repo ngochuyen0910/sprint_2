@@ -4,6 +4,7 @@ import com.book_store.model.Book;
 import com.book_store.repository.IBookRepository;
 import com.book_store.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,8 +16,8 @@ public class BookServiceImpl implements IBookService {
     private IBookRepository iBookRepository;
 
     @Override
-    public List<Book> findAll() {
-        return iBookRepository.findAll();
+    public List<Book> findAll(String keyword) {
+        return iBookRepository.findAll("%" + keyword + "%");
     }
 
     @Override

@@ -19,8 +19,12 @@ public class BookController {
     IBookService iBookService;
 
     @GetMapping
-    public ResponseEntity<List<Book>> findAll() {
-        return new ResponseEntity<>(iBookService.findAll(), HttpStatus.OK);
+    public ResponseEntity<List<Book>> findAll(@RequestParam String keyword) {
+        List<Book> book = iBookService.findAll(keyword);
+        if (book.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(book, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
