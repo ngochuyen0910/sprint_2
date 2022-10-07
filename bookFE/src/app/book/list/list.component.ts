@@ -10,8 +10,10 @@ import {CartService} from '../../service/cart.service';
 })
 export class ListComponent implements OnInit {
   book: Book[];
+  keyword = '';
 
-  constructor(private booksService: BooksService, private cartService: CartService) {
+  constructor(private booksService: BooksService,
+              private cartService: CartService) {
   }
 
   ngOnInit(): void {
@@ -19,9 +21,21 @@ export class ListComponent implements OnInit {
   }
 
   getAll() {
-    this.booksService.findAll().subscribe(book => {
+    this.booksService.findAll(this.keyword).subscribe(book => {
       this.book = book;
       console.log(book);
+    });
+  }
+
+  search() {
+    console.log(this.keyword);
+    if (this.keyword === undefined) {
+      this.keyword = '';
+      console.log(this.keyword);
+    }
+    this.booksService.findAll(this.keyword).subscribe(book => {
+      this.book = book;
+      this.keyword = '';
     });
   }
 

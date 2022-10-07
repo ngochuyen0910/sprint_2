@@ -1,15 +1,25 @@
 <br>
 <h2 class="d-flex justify-content-center">Văn học nước ngoài</h2>
+<nav class="navbar navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand"></a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" [(ngModel)]="keyword" name="keyword" placeholder="Nhập tên sách"
+             (keydown.enter)="search()" aria-label="Search">
+      <button class="btn btn-outline-success btn-search" (click)="search()">Tìm</button>
+    </form>
+  </div>
+</nav>
 <div class="container-fluid">
   <div class="row">
     <div class="col-3" *ngFor="let item of book">
       <div class="col-12 d-flex justify-content-center">
         <div class="card mt-5" style="width: 18rem;">
           <a [routerLink]="['/detail/', item.id]">
-          <img [src]="item.image" height="300px" class="card-img-top" alt="..."></a>
+            <img [src]="item.image" height="300px" class="card-img-top" alt="..."></a>
           <div class="card-body">
             <strong class="card-text">{{item.nameBook}}<br></strong>
-              <p>Số trang: {{item.pageNumber}}<br>
+            <p>Số trang: {{item.pageNumber}}<br>
               Giá: {{item.price | number}} VNĐ</p>
             <a class="text-white" [routerLink]="['/cart']"
                style="margin-right: 20px">

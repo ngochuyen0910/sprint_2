@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from '../service/token-storage.service';
 import {ShareService} from '../service/share.service';
+import {BooksService} from '../service/books.service';
+import {Book} from '../model/book';
 
 @Component({
   selector: 'app-header',
@@ -37,6 +39,4 @@ export class HeaderComponent implements OnInit {
   logOut() {
     this.tokenStorageService.signOut();
   }
-
 }
-
